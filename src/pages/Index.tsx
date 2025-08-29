@@ -127,13 +127,13 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Product showcase - simplified */}
-        <div className="flex justify-center space-x-1 mb-8">
-          {[1,2,3,4,5,6,7,8,9].map(i => (
-            <div key={i} className="w-16 h-16 bg-orange-200 border border-orange-300 rounded flex items-center justify-center text-xs">
-              Item
-            </div>
-          ))}
+        {/* Product showcase - Le Creuset cookware image */}
+        <div className="flex justify-center mb-8">
+          <img 
+            src="/lovable-uploads/807298af-f01e-4204-9ce9-35388d18a5ff.png" 
+            alt="Le Creuset Cookware Set" 
+            className="max-w-full h-auto max-h-64 object-contain"
+          />
         </div>
 
         {/* Survey section */}
