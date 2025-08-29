@@ -79,7 +79,7 @@ const Index = () => {
       {/* Simple header with just Le Creuset logo */}
       <div className="w-full bg-white py-6 px-6 border-b border-gray-200">
         <img 
-          src="/lovable-uploads/498e3fe9-f637-4955-9baf-52f54bcc330b.png" 
+          src="/lovable-uploads/e9c21c93-e0bd-409b-858d-811592a0754a.png" 
           alt="Le Creuset" 
           className="h-20 w-auto"
         />
