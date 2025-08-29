@@ -267,40 +267,38 @@ const Index = () => {
           </div>
         )}
 
-        {/* Comments section - Show on all pages after survey */}
-        {currentStep !== 'survey' && (
-          <div className="mt-16 max-w-2xl mx-auto">
-            <div className="text-left space-y-4">
-              <h3 className="text-xl font-bold text-center mb-6">What People Are Saying</h3>
-              
-              {[
-                { name: "Sallie Hull", comment: "Shit I didn't win anything!", likes: 29, time: "4 minutes ago" },
-                { name: "Natalie Jennings", comment: "I like these promotions!", likes: 9, time: "11 minutes ago" },
-                { name: "Casey Daniels", comment: "Love how light it feels but still delivers powerful performance in the kitchen! 🙄", likes: 22, time: "15 minutes ago" },
-                { name: "Emma Caldwell", comment: "I thought it was a joke, but my Le Creuset Cookware set arrived this morning!", likes: 36, time: "38 minutes ago" },
-                { name: "Florence Cleek", comment: "Delivers flawless results every time, pure kitchen magic!", likes: 31, time: "42 minutes ago" },
-                { name: "Amalia Falchi", comment: "Shhhh don't tell them that I'm using two different cards to get a Le Creuset's products for me and another to sell on FB marketplace lol. I think I've cracked the system", likes: 6, time: "1 hour ago" },
-                { name: "Margaret McNutt", comment: "It's my secret weapon for making every meal feel special!", likes: 15, time: "2 hours ago" },
-                { name: "Hannah Mason", comment: "Are there any other surveys to take?", likes: 39, time: "2 hours ago" },
-                { name: "Zoey Chandler", comment: "Fantastic! I have never won anything before!", likes: 23, time: "3 hours ago" },
-                { name: "Tina Williams", comment: "I noticed a difference in my cooking from the very first use!", likes: 30, time: "4 hours ago" }
-              ].map((comment, index) => (
-                <div key={index} className="border-b border-gray-200 pb-4 mb-4">
-                  <div className="flex items-center space-x-3 mb-2">
-                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                      {comment.name.split(' ').map(n => n[0]).join('')}
-                    </div>
-                    <span className="font-bold text-sm">{comment.name}</span>
+        {/* Comments section - Show on all pages */}
+        <div className="mt-16 max-w-2xl mx-auto">
+          <div className="text-left space-y-4">
+            <h3 className="text-xl font-bold text-center mb-6">What People Are Saying</h3>
+            
+            {[
+              { name: "Sallie Hull", comment: "Shit I didn't win anything!", likes: 29, time: "4 minutes ago" },
+              { name: "Natalie Jennings", comment: "I like these promotions!", likes: 9, time: "11 minutes ago" },
+              { name: "Casey Daniels", comment: "Love how light it feels but still delivers powerful performance in the kitchen! 🙄", likes: 22, time: "15 minutes ago" },
+              { name: "Emma Caldwell", comment: "I thought it was a joke, but my Le Creuset Cookware set arrived this morning!", likes: 36, time: "38 minutes ago" },
+              { name: "Florence Cleek", comment: "Delivers flawless results every time, pure kitchen magic!", likes: 31, time: "42 minutes ago" },
+              { name: "Amalia Falchi", comment: "Shhhh don't tell them that I'm using two different cards to get a Le Creuset's products for me and another to sell on FB marketplace lol. I think I've cracked the system", likes: 6, time: "1 hour ago" },
+              { name: "Margaret McNutt", comment: "It's my secret weapon for making every meal feel special!", likes: 15, time: "2 hours ago" },
+              { name: "Hannah Mason", comment: "Are there any other surveys to take?", likes: 39, time: "2 hours ago" },
+              { name: "Zoey Chandler", comment: "Fantastic! I have never won anything before!", likes: 23, time: "3 hours ago" },
+              { name: "Tina Williams", comment: "I noticed a difference in my cooking from the very first use!", likes: 30, time: "4 hours ago" }
+            ].map((comment, index) => (
+              <div key={index} className="border-b border-gray-200 pb-4 mb-4">
+                <div className="flex items-center space-x-3 mb-2">
+                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    {comment.name.split(' ').map(n => n[0]).join('')}
                   </div>
-                  <p className="text-sm mb-2 ml-13">{comment.comment}</p>
-                  <div className="text-xs text-gray-500 ml-13">
-                    I like it · Comment ❤️{comment.likes} · {comment.time}
-                  </div>
+                  <span className="font-bold text-sm">{comment.name}</span>
                 </div>
-              ))}
-            </div>
+                <p className="text-sm mb-2 ml-13">{comment.comment}</p>
+                <div className="text-xs text-gray-500 ml-13">
+                  I like it · Comment ❤️{comment.likes} · {comment.time}
+                </div>
+              </div>
+            ))}
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
