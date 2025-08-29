@@ -76,24 +76,13 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white text-black" style={{ fontFamily: 'Arial, sans-serif' }}>
-      {/* Header with brand logos - simplified placeholder boxes */}
-      <div className="flex justify-center items-center py-3 bg-gray-50">
-        <div className="flex space-x-1">
-          {[1,2,3,4,5,6,7,8,9].map(i => (
-            <div key={i} className="w-12 h-8 bg-gray-200 border border-gray-300 rounded flex items-center justify-center text-xs">
-              Logo
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Top navigation bar */}
-      <div className="flex justify-between items-center px-6 py-3 bg-white border-b">
-        <div className="flex items-center space-x-3">
-          <div className="w-6 h-6 bg-gray-300 rounded"></div>
-          <span className="text-sm font-bold">Loyalty Program</span>
-        </div>
-        <span className="text-sm text-gray-600">August 29, 2025</span>
+      {/* Simple header with just Le Creuset logo */}
+      <div className="w-full bg-white py-4 px-6 border-b border-gray-200">
+        <img 
+          src="/lovable-uploads/498e3fe9-f637-4955-9baf-52f54bcc330b.png" 
+          alt="Le Creuset" 
+          className="h-12 w-auto"
+        />
       </div>
 
       {/* Main content */}
