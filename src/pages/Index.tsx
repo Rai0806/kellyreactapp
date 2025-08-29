@@ -77,11 +77,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white text-black" style={{ fontFamily: 'Arial, sans-serif' }}>
       {/* Simple header with just Le Creuset logo */}
-      <div className="w-full bg-white py-4 px-6 border-b border-gray-200">
+      <div className="w-full bg-white py-6 px-6 border-b border-gray-200">
         <img 
           src="/lovable-uploads/498e3fe9-f637-4955-9baf-52f54bcc330b.png" 
           alt="Le Creuset" 
-          className="h-12 w-auto"
+          className="h-20 w-auto"
         />
       </div>
 
