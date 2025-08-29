@@ -217,9 +217,11 @@ const Index = () => {
             <h2 className="text-3xl font-bold text-green-600 mb-4">You did it!</h2>
             <p className="text-xl mb-6">Congratulations! You won the Le Creuset Cookware set!</p>
             
-            <div className="w-full h-64 bg-gray-200 border border-gray-300 rounded mb-6 flex items-center justify-center">
-              <span className="text-gray-500">Le Creuset Cookware Set Image</span>
-            </div>
+            <img 
+              src="/lovable-uploads/e0ea1277-9c3e-4bd1-a845-46e36f5e11ca.png" 
+              alt="Le Creuset Cookware Set" 
+              className="w-full max-w-md mx-auto mb-6 rounded-lg"
+            />
             
             <div className="text-left bg-gray-50 p-6 rounded mb-6">
               <h3 className="font-bold text-lg mb-4">***THE RULES***</h3>
