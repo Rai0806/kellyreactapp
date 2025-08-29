@@ -116,11 +116,11 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Product showcase - Le Creuset cookware image */}
+        {/* Product showcase - Le Creuset Dutch oven */}
         <div className="flex justify-center mb-8">
           <img 
-            src="/lovable-uploads/807298af-f01e-4204-9ce9-35388d18a5ff.png" 
-            alt="Le Creuset Cookware Set" 
+            src="/lovable-uploads/8a5793e3-162e-4f06-9f0c-db0bddcb678b.png" 
+            alt="Le Creuset Dutch Oven" 
             className="max-w-full h-auto max-h-64 object-contain"
           />
         </div>
