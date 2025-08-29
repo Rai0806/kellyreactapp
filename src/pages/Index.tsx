@@ -76,20 +76,24 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white text-black" style={{ fontFamily: 'Arial, sans-serif' }}>
-      {/* Header with brand logos */}
-      <div className="flex justify-center items-center py-4 space-x-2">
-        {[1,2,3,4,5,6,7,8,9].map(i => (
-          <img key={i} src={`https://healthyheadlinejournal.com/sharkellyLC/files/loogo_${i}.webp`} alt="" className="h-8" />
-        ))}
+      {/* Header with brand logos - simplified placeholder boxes */}
+      <div className="flex justify-center items-center py-3 bg-gray-50">
+        <div className="flex space-x-1">
+          {[1,2,3,4,5,6,7,8,9].map(i => (
+            <div key={i} className="w-12 h-8 bg-gray-200 border border-gray-300 rounded flex items-center justify-center text-xs">
+              Logo
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Top navigation bar */}
-      <div className="flex justify-between items-center px-4 py-2 bg-white">
-        <div className="flex items-center space-x-2">
-          <img src="/cart-icon.png" alt="Cart" className="h-6 w-6" />
+      <div className="flex justify-between items-center px-6 py-3 bg-white border-b">
+        <div className="flex items-center space-x-3">
+          <div className="w-6 h-6 bg-gray-300 rounded"></div>
           <span className="text-sm font-bold">Loyalty Program</span>
         </div>
-        <span className="text-sm">August 29, 2025</span>
+        <span className="text-sm text-gray-600">August 29, 2025</span>
       </div>
 
       {/* Main content */}
@@ -123,10 +127,12 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Product showcase */}
-        <div className="flex justify-center space-x-2 mb-8">
+        {/* Product showcase - simplified */}
+        <div className="flex justify-center space-x-1 mb-8">
           {[1,2,3,4,5,6,7,8,9].map(i => (
-            <img key={i} src={`https://healthyheadlinejournal.com/sharkellyLC/files/mainlarge11_${i}.webp`} alt="" className="h-16" />
+            <div key={i} className="w-16 h-16 bg-orange-200 border border-orange-300 rounded flex items-center justify-center text-xs">
+              Item
+            </div>
           ))}
         </div>
 
@@ -222,7 +228,9 @@ const Index = () => {
             <h2 className="text-3xl font-bold text-green-600 mb-4">You did it!</h2>
             <p className="text-xl mb-6">Congratulations! You won the Le Creuset Cookware set!</p>
             
-            <img src="https://healthyheadlinejournal.com/sharkellyLC/files/mainlarge11.png" alt="Le Creuset Cookware" className="w-full max-w-md mx-auto mb-6" />
+            <div className="w-full h-64 bg-gray-200 border border-gray-300 rounded mb-6 flex items-center justify-center">
+              <span className="text-gray-500">Le Creuset Cookware Set Image</span>
+            </div>
             
             <div className="text-left bg-gray-50 p-6 rounded mb-6">
               <h3 className="font-bold text-lg mb-4">***THE RULES***</h3>
@@ -237,7 +245,7 @@ const Index = () => {
               Apply now
             </button>
             
-            {/* Social comments */}
+            {/* Social comments - Always show */}
             <div className="mt-12 text-left space-y-4">
               <h3 className="text-xl font-bold text-center mb-6">Recent Comments</h3>
               
@@ -246,18 +254,58 @@ const Index = () => {
                 { name: "Natalie Jennings", comment: "I like these promotions!", likes: 9, time: "11 minutes ago" },
                 { name: "Casey Daniels", comment: "Love how light it feels but still delivers powerful performance in the kitchen! 🙄", likes: 22, time: "15 minutes ago" },
                 { name: "Emma Caldwell", comment: "I thought it was a joke, but my Le Creuset Cookware set arrived this morning!", likes: 36, time: "38 minutes ago" },
-                { name: "Florence Cleek", comment: "Delivers flawless results every time, pure kitchen magic!", likes: 31, time: "42 minutes ago" }
+                { name: "Florence Cleek", comment: "Delivers flawless results every time, pure kitchen magic!", likes: 31, time: "42 minutes ago" },
+                { name: "Amalia Falchi", comment: "Shhhh don't tell them that I'm using two different cards to get a Le Creuset's products for me and another to sell on FB marketplace lol. I think I've cracked the system", likes: 6, time: "1 hour ago" },
+                { name: "Margaret McNutt", comment: "It's my secret weapon for making every meal feel special!", likes: 15, time: "2 hours ago" },
+                { name: "Hannah Mason", comment: "Are there any other surveys to take?", likes: 39, time: "2 hours ago" },
+                { name: "Zoey Chandler", comment: "Fantastic! I have never won anything before!", likes: 23, time: "3 hours ago" },
+                { name: "Tina Williams", comment: "I noticed a difference in my cooking from the very first use!", likes: 30, time: "4 hours ago" }
               ].map((comment, index) => (
-                <div key={index} className="border-b border-gray-200 pb-3">
-                  <div className="flex items-center space-x-2 mb-1">
-                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                <div key={index} className="border-b border-gray-200 pb-3 mb-3">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
                       {comment.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <span className="font-bold text-sm">{comment.name}</span>
                   </div>
-                  <p className="text-sm mb-1">{comment.comment}</p>
-                  <div className="text-xs text-gray-500">
+                  <p className="text-sm mb-2 ml-12">{comment.comment}</p>
+                  <div className="text-xs text-gray-500 ml-12">
                     I like it · Comment ❤️ {comment.likes} · {comment.time}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Comments section - Show on all pages after survey */}
+        {currentStep !== 'survey' && (
+          <div className="mt-16 max-w-2xl mx-auto">
+            <div className="text-left space-y-4">
+              <h3 className="text-xl font-bold text-center mb-6">What People Are Saying</h3>
+              
+              {[
+                { name: "Sallie Hull", comment: "Shit I didn't win anything!", likes: 29, time: "4 minutes ago" },
+                { name: "Natalie Jennings", comment: "I like these promotions!", likes: 9, time: "11 minutes ago" },
+                { name: "Casey Daniels", comment: "Love how light it feels but still delivers powerful performance in the kitchen! 🙄", likes: 22, time: "15 minutes ago" },
+                { name: "Emma Caldwell", comment: "I thought it was a joke, but my Le Creuset Cookware set arrived this morning!", likes: 36, time: "38 minutes ago" },
+                { name: "Florence Cleek", comment: "Delivers flawless results every time, pure kitchen magic!", likes: 31, time: "42 minutes ago" },
+                { name: "Amalia Falchi", comment: "Shhhh don't tell them that I'm using two different cards to get a Le Creuset's products for me and another to sell on FB marketplace lol. I think I've cracked the system", likes: 6, time: "1 hour ago" },
+                { name: "Margaret McNutt", comment: "It's my secret weapon for making every meal feel special!", likes: 15, time: "2 hours ago" },
+                { name: "Hannah Mason", comment: "Are there any other surveys to take?", likes: 39, time: "2 hours ago" },
+                { name: "Zoey Chandler", comment: "Fantastic! I have never won anything before!", likes: 23, time: "3 hours ago" },
+                { name: "Tina Williams", comment: "I noticed a difference in my cooking from the very first use!", likes: 30, time: "4 hours ago" }
+              ].map((comment, index) => (
+                <div key={index} className="border-b border-gray-200 pb-4 mb-4">
+                  <div className="flex items-center space-x-3 mb-2">
+                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                      {comment.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                    <span className="font-bold text-sm">{comment.name}</span>
+                  </div>
+                  <p className="text-sm mb-2 ml-13">{comment.comment}</p>
+                  <div className="text-xs text-gray-500 ml-13">
+                    I like it · Comment ❤️{comment.likes} · {comment.time}
                   </div>
                 </div>
               ))}
